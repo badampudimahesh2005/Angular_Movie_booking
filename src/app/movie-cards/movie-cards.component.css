@@ -1,0 +1,85 @@
+.movie-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards in each row */
+  gap: 40px; /* Gap between cards */
+  grid-auto-rows: minmax(200px, auto); /* Adjust height as needed */
+
+  margin: 0 120px; /* Add margin to the left and right */
+}
+  
+  .card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  
+  
+  .card img {
+    width: 100%;
+    height: 100%; /* Use 100% height to fit within the grid cell */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+  
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .card:hover img {
+    transform: scale(1.1); /* Increase size on hover */
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .card:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+ 
+
+  @media(max-width: 960px){
+    .movie-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      
+      grid-auto-rows: minmax(200px, auto); /* Adjust height as needed */
+    
+      
+    }
+  }
+
+  @media(max-width: 730px){
+    .movie-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      
+      grid-auto-rows: minmax(200px, auto); /* Adjust height as needed */
+     
+    
+      
+    }
+   
+  }
+
+  @media(max-width: 564px){
+    .movie-cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); 
+      
+      grid-auto-rows: minmax(200px, auto); /* Adjust height as needed */
+     
+    
+      
+    }
+   
+  }

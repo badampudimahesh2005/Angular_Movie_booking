@@ -1,0 +1,10 @@
+<div class="movie-cards">
+    <div *ngFor="let movie of movies" class="card" (click)="openAboutPage(movie)">
+      <img [src]="movie.imageUrl" alt="{{ movie.title }}" (mouseover)="onHover(true)" (mouseout)="onHover(false)">
+      <div class="overlay" *ngIf="isHovered">
+        <p>{{ movie.title }}</p>
+        
+      </div>
+    </div>
+  </div>
+  

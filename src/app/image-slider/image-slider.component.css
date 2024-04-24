@@ -1,0 +1,80 @@
+.image-slider {
+    width: 70%;
+    height: 500px;
+    text-align: center;
+    margin: 20px auto; /* Center horizontally with top and bottom margin */
+  }
+  
+  .slider-container {
+    width: 100%; /* Ensure slider container takes full width */
+    height: 100%; /* Ensure slider container takes full height */
+    position: relative; /* Positioning for slider elements */
+    border-radius: 10px; /* Apply border-radius to the slider container */
+    
+
+  }
+  
+  /* Adjust the image size */
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none; /* Maintain aspect ratio */
+  border-radius: 10px; /* Apply border-radius to the slider container */
+
+}
+  
+  .slider-container img.active {
+    display: block;
+  }
+  
+  .image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+  }
+  
+  .slider-dots {
+    margin-top: 10px;
+  }
+  
+  .slider-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .slider-dots span.active {
+    background-color: #717171;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 100;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  

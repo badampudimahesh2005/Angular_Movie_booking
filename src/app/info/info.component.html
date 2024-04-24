@@ -1,0 +1,46 @@
+
+<div class="main-container">
+<div class="info-container">
+
+  <div class="main-img">
+    <img [src]="movie?.imageUrl" alt="{{ movie?.title }}">
+    <button class="trailer-btn" routerLink="/trailer">watch trailer</button>
+  </div>
+
+  <div class="title">
+    <h2>{{ movie?.title }}</h2>
+    <h3>34.6k <span>are intrested</span></h3>
+    <p>2h 30m - Action, Comedy</p>
+    <button title="book-ticket" routerLink="/ticket">Book Ticket</button>
+    <button class="trailer-button" routerLink="/trailer">Watch trailer</button>
+  </div>
+
+</div>
+    
+    <div class="info-details">
+      <h2>About the movie</h2>
+      <p>{{ movie?.description }}</p>
+
+    </div>
+  
+      
+
+      
+
+      <h3 class="cast-title">Cast</h3>
+      <div class="cast-container">
+        <div class="cast-member" *ngFor="let castMember of movie?.cast">
+          <img [src]="castMember.image" alt="{{ castMember.name }}">
+          <p>{{ castMember.name }}</p>
+        </div>
+    </div>
+
+
+    <div class="more-cards" style="margin-top: 50px;">
+      <h2>You might also likes</h2>
+  <app-more-cards ></app-more-cards>
+
+    </div>
+  
+  </div>
+ 
