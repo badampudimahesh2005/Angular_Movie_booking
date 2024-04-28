@@ -1,0 +1,27 @@
+
+
+<div class="payment-container">
+    <h2>Payment Details</h2>
+  
+    <p>Selected Movie: {{ selectedMovieObj?.movie.movieName }}</p>
+    <p>Price per seat: ${{ selectedMovieObj?.movie.ticketRate }}</p>
+    <p>Total Price: {{ selectedMovieObj?.totalPrice }}</p>
+  
+    <div class="form-group">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+      </div>
+  
+    <button (click)="processPayment()">Pay Now</button>
+  </div>
+  

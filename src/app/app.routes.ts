@@ -7,6 +7,7 @@ import { InfoComponent } from './info/info.component';
 import { TrailerComponent } from './trailer/trailer.component';
 import { SignupComponent } from './login/signup/signup.component';
 import { MovieSeatBookingComponent } from './movie-seat-booking/movie-seat-booking.component';
+import { PaymentComponent } from './movie-seat-booking/payment/payment.component';
 
 
 export const routes: Routes = [
@@ -21,7 +22,8 @@ export const routes: Routes = [
     {path: 'trailer', component:TrailerComponent},
     {path: 'signup', component:SignupComponent},
 
-    {path:'ticket',component:MovieSeatBookingComponent}
+    {path:'ticket',component:MovieSeatBookingComponent},
+    {path:'payment',component:PaymentComponent}
    
     
 

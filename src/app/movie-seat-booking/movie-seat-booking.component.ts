@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import  {Router} from '@angular/router'
+
 @Component({
   selector: 'app-movie-seat-booking',
   standalone: true,
@@ -167,6 +169,18 @@ export class MovieSeatBookingComponent {
       const seatPrice = this.selectedMovieObj.ticketRate;
       this.totalPrice = this.bookedSeatNoList.length * seatPrice;
     }
+  }
+
+  constructor(private router: Router) { }
+
+
+  bookTicket() {
+    const selectedMovieObj = { 
+      totalPrice:this.totalPrice,
+      movie:this.selectedMovieObj
+
+    };
+      this.router.navigate(['/payment'], { queryParams: { selectedMovieObj: JSON.stringify(selectedMovieObj) } });
   }
 
   
